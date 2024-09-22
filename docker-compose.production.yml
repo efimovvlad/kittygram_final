@@ -18,7 +18,7 @@ services:
       - db
     volumes:
       - static_volume:/backend_static
-      - media:/app/media
+      - media:/media
   frontend:
     image: efimovvlat/kittygram_frontend
     env_file: .env
@@ -30,6 +30,6 @@ services:
     env_file: .env
     volumes:
       - static_volume:/staticfiles/
-      - media:/app/media
+      - media:/media
     ports:
       - 9000:80
